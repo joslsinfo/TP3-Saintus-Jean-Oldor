@@ -1,0 +1,900 @@
+/* Propriétés générales */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  background-color: #f7f7f8;
+  color: #060606;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+/* =================================Entête =================================*/
+
+.nav-burger {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 2rem 2rem;
+  background-color: #11a8e4;
+  font-size: 1.4rem;
+}
+
+.nav-bar {
+  list-style-type: none;
+}
+
+.nav-bar,
+.navbar-liste {
+  display: inline-block;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #f7f7f8;
+  padding: 0.5rem 1.3rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+.nav-bar a:hover {
+  background-color: #e6413f;
+  color: #d7cd19;
+  padding: 0.5rem 1.3rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  transition: color 0.2s;
+}
+
+.logo-burger {
+  width: 200px;
+}
+.logo-burger:hover{
+  opacity: 0.9;
+   
+}
+
+.btn-active {
+  background-color: #e6413f;
+  padding: 0;
+  margin: 0;
+}
+
+
+.btn-disable {
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+  
+}
+
+
+
+
+.burger-shop {
+  display: none;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.nos-burgers,
+.nos-beignes,
+.t-shirt,
+.le-restaurant,
+.commande,
+.reservation {
+  text-transform: uppercase;
+  padding: 2rem 0 0 2rem;
+  font-family: "Roboto", sans-serif;
+}
+.t-shirt {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.para {
+  padding-left: 2.5rem;
+  padding-top: 0;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+h2 {
+  margin: 3rem 1rem 3rem 1rem;
+}
+
+/* =========================Partie principale=========================  */
+
+/* =================================Menu============================== */
+.main-menu-burger {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+.menu-item-burger {
+  width: 25%;
+  margin-bottom: 5rem;
+}
+.main-menu-beigne {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+.menu-item-beigne {
+  width: 25%;
+  margin-bottom: 5rem;
+}
+.product-price {
+  font-weight: bold;
+}
+
+.main-menu-t-shirt {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+.details {
+  width: 50%;
+  padding: 1rem;
+}
+
+#section-t-shirt {
+  background-color: #ccc;
+}
+
+.btn-panier {
+  display:block;
+  text-align: center;
+  width:65%;
+  text-decoration: none;
+  border: 1px solid #11a8e4;
+  background-color: #e6413f;
+  padding: 0.5rem;
+  margin:0 auto;
+  color: #f8f5f3;
+ 
+}
+
+.btn-panier:hover {
+  display:block;
+  text-align: center;
+  width:65%;
+  text-decoration: none;
+  border: 1px solid #11a8e4;
+  background-color: #d7cd19;
+  margin: 0 auto;
+  padding: 0.5rem;
+  color: #e6413f;
+  border-radius: 10px;
+}
+.btn-panier-t-shirt{
+  display:block;
+  text-align: center;
+  width:35%;
+  text-decoration: none;
+  border: 1px solid #11a8e4;
+  background-color: #e6413f;
+  padding: 0.5rem;
+  margin:auto 2rem;
+  color: #f8f5f3;
+ 
+}
+.btn-panier-t-shirt:hover {
+  display:block;
+  text-align: center;
+  width:35%;
+  text-decoration: none;
+  border: 1px solid #11a8e4;
+  background-color: #d7cd19;
+  padding: 0.5rem;
+  margin:auto 2rem;
+  color: #e6413f;
+  border-radius: 10px;
+  
+}
+
+.product-price {
+  margin-bottom: 1.5rem;
+}
+.product-name,
+.product-price {
+  text-align: center;
+}
+
+/* ===============================Page reservation================================= */
+#form-reservation {
+  margin: 0px 4px 40px 30px;
+  width: 95%;
+}
+
+.titre-h2-form{
+  text-align:center;
+  text-transform:uppercase;
+  background-color: #d7cd19;
+}
+
+fieldset {
+  background-color: #f8f5f3;
+  border: 1px solid #11a8e4;
+  border-radius:10px;
+}
+
+label{
+  width:250px;
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+.infos {
+  margin: 2rem auto;
+  width:80%;
+    
+}
+
+
+#nom:focus-visible{
+  border-color: #d7cd19;
+  
+}
+
+#nom,#prenom,#phone,#datereservation,#mail{
+  width:20%;
+  padding:0.3em;
+}
+#heure-reservation{
+  width:15%;
+  padding:0.3em;
+}
+#nombre_P{
+  width:15%;
+  padding:0.3em;
+}
+#commentaires{
+  width:35%;
+}
+
+.legend {
+  font-weight: bold;
+  color: #11a8e4;
+  margin:10px;
+  
+}
+
+#soumettre {
+  color: #f8f5f3;
+  background-color: #11a8e4;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0.9rem;
+  border: 1px solid #11a8e4;
+  cursor: pointer;
+}
+#soumettre:hover,
+#soumettre:focus {
+  color: #11a8e4;
+  background-color: #f8f5f3;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0.9rem;
+  border: 1px solid #11a8e4;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border: 3px solid #d7cd19;
+  outline: none;
+}
+#prenom:focus,#phone:focus,#nombre_P:focus,#datereservation:focus,#heure-reservation:focus,#mail:focus{
+  border: 3px solid #d7cd19;
+  outline:none;
+}
+
+input,textarea,select{
+  border:3px solid #f8f5f3;
+}
+
+
+input[type="radio"]{
+  border: 3px solid #11a8e4;
+  background-color:#11a8e4;
+  color:#11a8e4;
+  display:block;
+  margin: 0 37%;
+}
+
+
+ form:invalid{
+  border: 3px solid #f8f5f3;
+}
+
+input:invalid{
+    background-color:#f8f5f3;
+}
+input:valid{
+    background-color:#11a8e4;
+} 
+
+
+ input:required{
+    border-color:#11a8e4;
+    
+} 
+
+ input:required:valid{
+    border-color:#11a8e4;
+  }
+
+input:valid{
+  background-color:#11a8e4;
+}
+
+#heure-reservation:valid{
+  background-color:#11a8e4;
+}
+
+#heure-reservation{
+  border-color:#11a8e4;
+}
+
+#commentaires:invalid{
+  background-color:#f8f5f3;
+}
+#mail:invalid{
+  background-color:#f8f5f3;
+}
+#commentaires:valid{
+  background-color:#11a8e4;
+}
+
+#mail:valid{
+  background-color:#11a8e4;
+} 
+
+
+
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.confirmation-reservation {
+  color: green;
+  background-color: #11a8e4;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom:6rem;
+}
+
+/* ===============================Le restaurant=================================== */
+.grid-restaurant {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "e1 e1 e2"
+    "e1 e1 e3"
+    "e4 e6 e6"
+    "e5 e6 e6";
+   margin: 1rem 1rem;
+}
+.img-terrasse {
+  grid-area: e1;
+  width: 100%;
+}
+.img-serveur {
+  grid-area: e2;
+}
+
+.img-table {
+  grid-area: e3;
+}
+.img-fille {
+  grid-area: e4;
+}
+.img-gars {
+  grid-area: e5;
+}
+
+.img-salle {
+  grid-area: e6;
+  width: 100%;
+}
+
+.main-resto {
+  margin-bottom: 2rem;
+}
+
+/* =========================Ma commande=========================== */
+.tables {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.ligne-commander {
+  margin-bottom: 3rem;
+  padding: 1rem 0.5rem 2rem 1rem;
+}
+.btn-commander {
+  text-decoration: none;
+  border: 1px solid #11a8e4;
+  background-color: #e6413f;
+  padding: 0.5rem;
+  color: #f8f5f3;
+  font-size: 15px;
+}
+
+.btn-commander:hover {
+  text-decoration: none;
+  border: 1px solid #11a8e4;
+  background-color: #d7cd19;
+  color: #e6413f;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.tab1 {
+  width: 62%;
+  border-collapse: collapse;
+  margin-left: 1rem;
+}
+
+.tab2 {
+  width: 32%;
+  border-collapse: collapse;
+  background-color: #11a8e4;
+  margin-right: 1rem;
+}
+td {
+  padding: 0.5rem 0.8rem;
+}
+.td-style {
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.fleche {
+  border: 1px solid #060606;
+  background-color: #060606;
+  border-radius: 20px;
+  vertical-align: middle;
+}
+.champrequis {
+  color: #e6413f;
+}
+
+.trait {
+  border-bottom: 1px solid #060606;
+}
+
+
+
+/* =========================Pieds de page=========================*/
+
+.footer1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: #e6413f;
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+  font-size: 1.5rem;
+  background-color: #11a8e4;
+}
+.img-tel {
+  vertical-align: middle;
+}
+.btn-tel {
+  text-decoration: none;
+  border: 1px solid #11a8e4;
+  background-color: #e6413f;
+  padding: 0.5rem 1.3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  color: #f8f5f3;
+  font-size: 20px;
+}
+.btn-tel:hover {
+  text-decoration: none;
+  color: #d7cd19;
+  padding: 0.5rem 1.3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.footer2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #e6413f;
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+  font-size: 1rem;
+}
+.epaisseur {
+  font-weight: bold;
+}
+.pipe {
+  margin: 0 5px;
+}
+
+/* =======================================MEDIAS QUERIES======================================= */
+
+/* ======================Navigation============================== */
+@media screen and (max-width: 960px) {
+  .nav-bar {
+    display: none !important;
+  }
+
+  .menu-mobile {
+    display: block;
+    padding-right: 1rem;
+  }
+  .logo-burger {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .logo-burger {
+    width: 30px;
+  }
+  .t-shirt {
+    font-size: 1rem;
+  }
+  .para {
+    font-size: 1rem;
+  }
+}
+/* ==============================Page d'accueil============================== */
+@media screen and (max-width: 1200px) {
+  .menu-item-burger,
+  .menu-item-beigne {
+    width: 33%;
+    margin-bottom: 5rem;
+  }
+
+  .logo-burger {
+    width: 100px;
+  }
+  .btn-panier-t-shirt{
+    width:35%;
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+  .menu-item-burger,
+  .menu-item-beigne {
+    width: 50%;
+    margin-bottom: 5rem;
+  }
+  
+  .btn-panier{
+    width:50%;
+    margin: 0 auto;
+    font-size:1rem;
+ 
+  }
+  .btn-panier-t-shirt{
+    width:25%;
+    font-size: 1rem;
+  }
+ 
+  .details {
+    width: 100%;
+  }
+}
+@media screen and (max-width:700px) {
+  .btn-panier{
+    margin: 0 auto;
+    width:65%;
+    
+  }
+  .btn-panier-t-shirt{
+    width:35%;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+}
+
+@media screen and (max-width: 570px) {
+  .menu-item-burger,
+  .menu-item-beigne {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  .btn-panier {
+    margin: 0 auto;
+    width:50%;
+    
+  }
+  .btn-panier-t-shirt{
+    width:45%;
+  }
+  .nos-burgers,
+  .nos-beignes {
+    background-color: #d7cd19;
+  }
+  .nos-burgers, .nos-beignes{
+    text-align:center;
+  }
+}
+
+/* ===============================Page Réservation================================ */
+
+@media screen and (max-width: 960px) {
+  
+  #form-reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto 3rem auto;
+  }
+
+  .infos{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  label{
+      text-align:center;
+      
+  }
+  
+ 
+  #nom,#prenom,#phone,#mail,#commentaires{
+    width:450px;
+    text-align: center;
+    
+  }
+  #datereservation{
+    width:50%;
+  }
+  #heure-reservation{
+    width:50%;
+  }
+ label{
+   text-align: center;
+ }
+  #nombre_P{
+    width:30%;
+  }
+  #soumettre{
+    width:35%;
+   
+  }
+   
+}
+
+@media screen and (max-width: 570px) {
+  #form-reservation {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #nom,#prenom,#phone,#datereservation,#heure-reservation,#mail,#commentaires{
+    width:240px;
+  }
+  #nombre_P{
+    width:20%;
+  }
+
+  #form-reservation{
+    margin-bottom: 1.5rem;
+  }
+
+  .titre-h2-form{
+    text-align:center;
+    text-transform:uppercase;
+    background-color: #d7cd19;
+    font-size:65%;
+    margin:0 auto;
+    width:65%;
+  }
+  #soumettre{
+    width:65%;
+  }
+}
+
+
+
+
+
+/* =============================Le Restaurant=================================== */
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  .grid-restaurant {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+      grid-template-areas:
+      "e6 e6 e4"
+      "e6 e6 e5"
+      "e2 e1 e1"
+      "e3 e1 e1";
+      
+  }
+  .img-terrasse {
+    grid-area: e1;
+    width: 100%;
+  }
+  .img-serveur {
+    grid-area: e2;
+  }
+
+  .img-table {
+    grid-area: e3;
+  }
+  .img-fille {
+    grid-area: e4;
+  }
+  .img-gars {
+    grid-area: e5;
+  }
+
+  .img-salle {
+    grid-area: e6;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .grid-restaurant {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "e2 e2 e2"
+    "e3 e3 e3"
+    "e4 e4 e4"
+    "e5 e5 e5";
+     
+  }
+ 
+  .img-terrasse,.img-salle {
+    display: none;
+  }
+  .le-restaurant {
+    text-align: center;
+    background-color: #d7cd19;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .le-restaurant {
+    text-align: center;
+    color: #e6413f;
+  }
+  .footer1,
+  .footer2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .grid-restaurant {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "e4 e4 e4"
+    "e4 e4 e4"
+    "e5 e5 e5"
+    "e5 e5 e5";
+      
+  }
+  .img-terrasse,.img-serveur,.img-table,
+  .img-salle
+   {
+    display: none;
+  }
+  .le-restaurant {
+    text-align: center;
+    background-color: #e6413f;
+    color: #d7cd19;
+  }
+}
+
+/* ========================Page commande======================== */
+@media screen and (max-width: 960px) {
+  .tables {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+  }
+  .tab1,
+  .tab2 {
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+   
+  }
+  .tab2{
+    width:62%;
+  }
+
+  .commande {
+    text-align: center;
+    background-color: #d7cd19;
+    font-size: 1.3rem;
+  }
+  .td-style,
+  .fleche {
+    font-size: 0.5rem;
+  }
+  .main-menu-t-shirt {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+  .details {
+    margin: 1.5rem auto;
+  }
+ 
+}
+
+
+@media screen and (max-width: 570px) {
+  .tables {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+  }
+  .tab1,
+  .tab2 {
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+    width:50%;
+  }
+  
+
+  .commande {
+    text-align: center;
+    background-color: #d7cd19;
+    font-size: 1.3rem;
+  }
+  .td-style,
+  .fleche {
+    font-size: 0.5rem;
+  }
+  .main-menu-t-shirt {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+  .details {
+    margin: 1.5rem auto;
+  }
+ 
+}

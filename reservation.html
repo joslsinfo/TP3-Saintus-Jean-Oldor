@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Réservation - BURGER-SHOP - Site web responsive</title>
+  <meta name="description" content="Page de Réservation du site web responsive du restaurant BURGER-SHOP" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+  <link rel="icon" href="logo-burger-shop-flavicon.png" />
+</head>
+
+<body>
+  <!-- L'en-tête de la page avec la barre de navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav-burger">
+        <div>
+          <a href="index.html"><img class="logo-burger" src="img/logo-burger-shop.png" alt="Logo Burger Shop" /></a>
+        </div>
+        <ul class="nav-bar">
+          <li class="navbar-liste"><a href="index.html">Menu</a></li>
+          <li class="navbar-liste">
+            <a class="btn-disable" href="reservation.html">Réservation</a>
+          </li>
+          <li class="navbar-liste">
+            <a href="restaurant.html">Restaurant</a>
+          </li>
+          <li class="navbar-liste">
+            <a class="btn-active" href="macommande.html">Ma commande</a>
+          </li>
+        </ul>
+        <div>
+          <a href="index.html"><img class="menu-mobile" src="img/icon-menu-fonce.png" alt="Menu mobile" /></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Partie principale -->
+  <main>
+    <section class="container">
+      <h1 class="reservation">réservation</h1>
+      <h2 class="titre-h2-form">Formulaire de réservation</h2>
+
+      <form id="form-reservation" method="post" action="confirmationreservation.html">
+        <fieldset>
+          <legend class="legend">Informations</legend>
+          <div class="infos">
+            <label for="nom">Votre nom : <span class="champrequis">*</span></label>
+            <input type="text" id="nom" name="nom" autofocus minlength="2" maxlength="50" placeholder="Votre nom "
+              required />
+          </div>
+          <div class="infos">
+            <label for="prenom">Votre prénom : <span class="champrequis">*</span>
+            </label>
+            <input type="text" id="prenom" name="prenom" minlength="2" maxlength="50" placeholder="Votre prénom "
+              required />
+          </div>
+          <div class="infos">
+            <label for="phone">Entrer votre numéro de téléphone :
+              <span class="champrequis">*</span>
+            </label>
+            <input type="tel" id="phone" name="phone" placeholder="514-730-8206" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              title="Il faut saisir le numéro de téléphone avec le tiret comme indiqué dans ce champ" required />
+            <!-- <small>Format: 514-730-8206</small> -->
+          </div>
+          <div class="infos">
+            <label for="nombre_P">Nombre de personnes pour la réservation :
+              <span class="champrequis">*</span>
+            </label>
+            <input type="number" id="nombre_P" name="nombre_P" min="1" max="350" placeholder="1"
+              title="Il vous faut au moins une personne pour faire la réservation" required />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend">Informations additionnelles</legend>
+          <div class="infos">
+            <label for="datereservation"> Date de la réservation : <span class="champrequis">*</span></label>
+            <input type="date" id="datereservation" name="datereservation" required />
+
+          </div>
+
+
+          <div class="infos">
+
+            <label for="choix1">Faire le choix de votre réservation :
+              <span class="champrequis">*</span>
+            </label>
+            <input type="radio" id="choix1" class="label-choix" name="reservation" value="salle_a_manger" required />
+            <label for="choix1">En Salle à manger</label>
+            <input type="radio" id="choix2" name="reservation" value="terrasse" required />
+            <label for="choix2">En Terrasse</label>
+
+          </div>
+          <div class="infos">
+            <label for="heure-reservation">Heure de la réservation : <span class="champrequis">*</span>
+            </label>
+            <select name="heure-reservation" id="heure-reservation" required
+              title="Cliquer ici pour selectionner l'heure de la réservation: ">
+              <option value="" selected>Heure</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+            </select>
+          </div>
+
+          <div class="infos">
+            <label for="mail">Adresse courriel :</label>
+            <input type="email" id="mail" name="mail" placeholder="xxxx@mail.com"
+              title="Rentrer votre courriel votrecourriel@gmail.com par exemple" />
+          </div>
+          <div class="infos">
+            <label for="commentaires">Vos commentaires :</label>
+            <textarea id="commentaires" name="commentaires" rows="4" cols="50"
+              placeholder="Laisser vos commentaires ici..."></textarea>
+          </div>
+          <div class="infos">
+            <label for="infolettre">S'inscrire à l'infolettre :</label>
+            <input type="checkbox" id="infolettre" name="infolettre" value="infolettre" />
+          </div>
+
+        </fieldset>
+        <div class="infos">
+          <input type="submit" id="soumettre" name="soumetttre" value="Soumission" />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pieds de la page -->
+
+  <footer>
+    <div class="footer1 container">
+      <p>
+        <span class="epaisseur">Burger Shop</span> : 1660 boul. de l'Entente,
+        Québec
+      </p>
+      <p>
+        <a class="btn-tel" href="tel:+14181234567">
+          <img class="img-tel" src="img/img-phone2.png" alt="logo phone" />
+          418-123-4567</a>
+      </p>
+    </div>
+
+    <div class="footer2 container">
+      <p>
+        Ce site est réalisé par :
+        <span class="epaisseur">Jean Oldor Saintus</span>
+      </p>
+      <span class="pipe">|</span>
+      <p>
+        Dans le cadre de AEC en développement web Front-end - Cégep de
+        Trois-Rivières
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
