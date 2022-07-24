@@ -2,7 +2,7 @@
     "name": "Burger Shop",
     "short_name": "Burger",
     "icons": [{
-        "src": "TP3-Saintus-Jean-Oldor/img/maskable_icon_48",
+        "src": "joslsinfo/TP3-Saintus-Jean-Oldor/img/maskable_icon_48",
         "sizes": "48x48",
         "type": "image/png"
 
