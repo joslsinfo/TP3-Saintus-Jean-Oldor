@@ -32,4 +32,5 @@ function installPWA(evt) {
 
    function logAppInstalled(evt) {
     // CODELAB: Add code to log the event
+    console.log('message pour tester', evt);
    }
