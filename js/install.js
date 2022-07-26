@@ -3,7 +3,7 @@ const installButton = document.getElementById('btnInstall');
 installButton.addEventListener('click', installPWA);
 
 
-indow.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
+window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 
 
 function saveBeforeInstallPromptEvent(evt) {
@@ -13,9 +13,22 @@ function saveBeforeInstallPromptEvent(evt) {
 }    
 
 function installPWA(evt) {
-    // CODELAB: Add code show install prompt & hide the install button.
-    // CODELAB: Log user response to prompt.
-   }
+    // Add code show install prompt & hide the install button.
+    deferredInstallPrompt.prompt();
+    // Hide the install button, it can't be called twice.
+    evt.srcElement.setAttribute('hidden', true);
+    // Log user response to prompt.
+    deferredInstallPrompt.userChoice
+    .then((choice) => {
+    if (choice.outcome === 'accepted') {
+    console.log('User accepted the A2HS prompt', choice);
+    } else {
+    console.log('User dismissed the A2HS prompt', choice);
+    }
+    deferredInstallPrompt = null;
+    });
+}
+   
 
    function logAppInstalled(evt) {
     // CODELAB: Add code to log the event
