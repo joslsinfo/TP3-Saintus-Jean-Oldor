@@ -29,6 +29,7 @@ function installPWA(evt) {
     });
 }
    
+window.addEventListener('appinstalled', logAppInstalled);
 
    function logAppInstalled(evt) {
     // CODELAB: Add code to log the event
