@@ -1,5 +1,5 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v6';
+const CACHE_NAME = 'static-cache-v7';
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
@@ -7,7 +7,7 @@ const FILES_TO_CACHE = [
 ];
 
 
-/** Ces lignes de codes permettent, à l'installation du site, quand le servicce worker est chargé puis l'évènement install est levé, 
+/** Ces lignes de codes permettent, à l'installation du site, quand le servicce worker est chargé puis l'événement install est levé, 
 de créer une cache dans le navigateur ou de mettre en cache tous les fichiers qu'on souhaite mettre en cache listés dans const FILES_TO_CACHE */
 self.addEventListener('install', (evt) => {
     console.log('[ServiceWorker] Install');
@@ -48,8 +48,8 @@ self.addEventListener('install', (evt) => {
 
 /** Gestion de la perte de connexion
  * Ces lignes de codes permettent de rediriger vers la page offline mise en cache si l'usager perd la connexion pendant qu'il navigue sur notre PWA 
- * A chaque fois que l'évènement fetch est levé c'est-à-dire à chaque fois que le navigateur va chercher une ressource à afficher à l'usager, ça peut être une image, un fichier html et autres, 
- * si jamais on n'est pas en train de naviguer et il y a un problème avec l'évènement fetch, va ouvrir la cache qui porte le nom de la version actuelle, puis
+ * A chaque fois que l'événement fetch est levé c'est-à-dire à chaque fois que le navigateur va chercher une ressource à afficher à l'usager, ça peut être une image, un fichier html et autres, 
+ * si jamais on n'est pas en train de naviguer et il y a un problème avec l'événement fetch, va ouvrir la cache qui porte le nom de la version actuelle, puis
  * va chercher le fichier qui est dans cache.match('/TP3-Saintus-Jean-Oldor/offline.html' ), car il n'y a plus de connexion d'internet. Dans ce cas-ci c'est offline.html, mais ça peut être un autre fichier
  * */
    self.addEventListener('fetch', (evt) => {
