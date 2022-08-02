@@ -7,6 +7,7 @@ const FILES_TO_CACHE = [
 ];
 
 
+// Ces lignes de codes permettent, à l'installation du site, quand le servicce worker est chargé puis l'évènement install est levé, de créer une cache dans le navigateur ou de mettre en cache tous les fichiers listés dans const FILES_TO_CACHE 
 self.addEventListener('install', (evt) => {
     console.log('[ServiceWorker] Install');
     // Precache static resources here.
