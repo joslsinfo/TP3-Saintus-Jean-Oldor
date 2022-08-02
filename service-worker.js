@@ -64,7 +64,7 @@ self.addEventListener('install', (evt) => {
     .catch(() => {
     return caches.open(CACHE_NAME)
     .then((cache) => {
-   return cache.match('/TP3-Saintus-Jean-Oldor/offline.html' );
+   return cache.match('offline.html' );
     });
     })
     );
