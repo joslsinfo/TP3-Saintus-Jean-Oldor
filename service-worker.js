@@ -7,7 +7,8 @@ const FILES_TO_CACHE = [
 ];
 
 
-// Ces lignes de codes permettent, à l'installation du site, quand le servicce worker est chargé puis l'évènement install est levé, de créer une cache dans le navigateur ou de mettre en cache tous les fichiers listés dans const FILES_TO_CACHE 
+/** Ces lignes de codes permettent, à l'installation du site, quand le servicce worker est chargé puis l'évènement install est levé, 
+de créer une cache dans le navigateur ou de mettre en cache tous les fichiers qu'on souhaite mettre en cache listés dans const FILES_TO_CACHE */
 self.addEventListener('install', (evt) => {
     console.log('[ServiceWorker] Install');
     // Precache static resources here.
@@ -21,6 +22,11 @@ self.addEventListener('install', (evt) => {
    });
 
 
+
+/**Ces lignes de codes permettent de vider la cache actuelle pour une nouvelle cache si les noms de cahes est différent 
+ * Sinon, ca va garder en mémoire l'ancienne cache qui pourrait empécher que le site fonctionne correctement.
+ * Alors, il faut toujours changer la version de la cache pour que ca prenne en compte les nouvelles modifications des informations faites dans les fichiers du site web.
+*/
 
    self.addEventListener('activate', (evt) => {
     console.log('[ServiceWorker] Activate');
@@ -40,6 +46,12 @@ self.addEventListener('install', (evt) => {
    });
 
 
+/** Gestion de la perte de connexion
+ * Ces lignes de codes permettent de rediriger vers la page offline mise en cache si l'usager perd la connexion pendant qu'il navigue sur notre PWA 
+ * A chaque fois que l'évènement fetch est levé c'est-à-dire à chaque fois que le navigateur va chercher une ressource à afficher à l'usager, ça peut être une image, un fichier html et autres, 
+ * si jamais on n'est pas en train de naviguer et il y a un problème avec l'évènement fetch, va ouvrir la cache qui porte le nom de la version actuelle, puis
+ * va chercher le fichier qui est dans cache.match('/TP3-Saintus-Jean-Oldor/offline.html' ), car il n'y a plus de connexion d'internet. Dans ce cas-ci c'est offline.html, mais ça peut être un autre fichier
+ * */
    self.addEventListener('fetch', (evt) => {
     console.log('[ServiceWorker] Fetch', evt.request.url);
     //Add fetch event handler here.
