@@ -557,7 +557,7 @@ td {
 /* ======================Navigation============================== */
 @media screen and (max-width: 960px) {
   .nav-bar {
-    /* display: none !important; */
+    display: none !important;
   }
 
   .menu-mobile {
